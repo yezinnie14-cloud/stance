@@ -45,7 +45,7 @@ const App = () => {
 
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<Layout />} />
         <Route path="/" element={<MainPage onAdd={handleAddToCart}/>} />
@@ -58,6 +58,7 @@ const App = () => {
     </HashRouter>
     // </BrowserRouter>
   );
+};
 };
 
 export default App;
