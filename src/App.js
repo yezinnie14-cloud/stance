@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import MainPage from "./pages/MainPage";
@@ -19,9 +19,13 @@ const App = () => {
         cart.id === [product].id ? { ...cart,quantity: cart.quantity +1}
       : cart
     );
+    setCartItems(items);
+    } else{
+      const items = [...cartItems, {...product, quantity:1}];
+      setCartItems(items);
+    }
   };
-
-
+ 
   const handleUpdateQuantity = (id, type) => {
     const update = cartItems.map((item)=> {
       if(item.id === id) {
@@ -44,8 +48,10 @@ const App = () => {
 
 
 
+ 
+
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route element={<Layout />} />
         <Route path="/" element={<MainPage onAdd={handleAddToCart}/>} />
@@ -53,12 +59,10 @@ const App = () => {
           cartItems={cartItems}
           onUpdate={handleUpdateQuantity}
           onDelete={handleCartDelete} />} />
-        <Route path="/category" element={<CategoryPage  onAdd={handleAddToCart}/>} />        
+        <Route path="/category" element={<CategoryPage  onAdd={handleAddToCart}/>} />
       </Routes>
-    </HashRouter>
-    // </BrowserRouter>
+    </BrowserRouter>
   );
-};
 };
 
 export default App;
