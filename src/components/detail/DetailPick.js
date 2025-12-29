@@ -1,5 +1,5 @@
 import React from 'react';
-import ItemData from '../../assets/data/Item.json'; // 스크린샷 구조 반영
+import ItemData from '../../assets/data/Item.json';
 import './DetailPick.scss';
 
 const DetailPick = () => {
@@ -14,7 +14,6 @@ const DetailPick = () => {
                 <li key={item.id} className="pick-item">
                     <div className="thumb">
                       <img src={require(`../../assets/images/Shoes/${item.image}`)} alt={item.title} />
-                        {/* <img src={`${imgPath}/${item.image}`} alt={item.title} /> */}
                     </div>
                     <div className="text-box">
                         <p className="sub-title">{item.sub1}</p>

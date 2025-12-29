@@ -82,7 +82,7 @@
     .check {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 0.5rem;
       @include body-M();
       color: var(--Text-400);
 
@@ -252,16 +252,16 @@
 .mini-summary {
   padding: 14px 16px;
   border-top: 1px solid #E4E7EC;
-  background: #fff;
+  background: var(--Static-white);
   @include body-M();
   color: var(--Static-black);
 
   .row-txt {
     @include flex-layout(row, space-between, center);
-    padding: 8px 0;
+    padding: 0.5rem 0;
 
     &.total {
-      padding-top: 12px;
+      padding-top: 0.7rem;
 
       span:nth-child(2) {
         @include subtitle-M();
@@ -291,7 +291,7 @@
 
     .summary-title {
       @include subtitle-L();
-      margin-bottom: 14px;
+      margin-bottom: 0.8rem;
     }
 
     .summary-row {
