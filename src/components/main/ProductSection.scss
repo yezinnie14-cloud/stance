@@ -1,0 +1,245 @@
+@use "../../assets/scss/mixins" as *;
+
+//pc버전
+#best-seller {
+  width: 100%;
+  padding-bottom: 5rem;
+  > h2 {
+    padding: 0 3rem 14px;
+  }
+  .slider-wrap {
+    position: relative;
+    overflow: hidden;
+    ul.slider {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-right: 1px solid #0073e5;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        flex: 0 0 25%;
+        background-color: rgba(245, 245, 245, 1);
+        &:hover img {
+          animation: float 1.5s ease-in-out infinite;
+        }
+        .img-wrap {
+          flex: 1;
+          position: relative;
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          overflow: hidden;
+          img {
+            flex: 1;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            &:hover {
+              animation: float 1.5s ease-in-out infinite;
+            }
+          }
+          .num {
+            position: absolute;
+            left: 16px;
+            bottom: -0.5rem;
+            font-size: 3rem;
+            font-style: italic;
+            color: var(--Primary-300);
+          }
+          .heart {
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            font-size: 28px;
+            cursor: pointer;
+            color: #aaa;
+            &.on{
+              color: #ff4d6d;
+            }
+            &:hover {
+              transition: 0.3s;
+              color: #ff4d6d;
+            }
+          }
+        }
+        .best-txt {
+          height: auto;
+          border: 1px solid #0073e5;
+          border-left: none;
+          border-right: none;
+          background-color: var(--Static-white);
+          padding: 1.25rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          > p.title {
+            font-size: 0.875rem;
+            font-weight: 700;
+          }
+          > p.sub1 {
+            font-size: 1.125rem;
+          }
+          .price {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            .price-row {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              .discount {
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #0073e5;
+              }
+              .sale-price {
+                height: auto;
+                // font-size: 1.5rem;
+                font-size: clamp(1rem, 4.5vw, 1.5rem);
+                font-weight: 700;
+                > span {
+                  // font-size: 1.125rem;
+                  font-size: clamp(0.875rem, 4vw, 1.125rem);
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+        &:hover .best-txt {
+          transition: 0.5s;
+          background-color: var(--Primary-100);
+        }
+        &:hover p.sub1 {
+          transition: 0.5s;
+          font-weight: bolder;
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .prev,
+      .next {
+        transition: 0.3s;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--Static-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          background: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+  .indi-bottom {
+    width: 100%;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    .indicator {
+      display: flex;
+      gap: 12px;
+      width: calc(100% - 150px);
+      span {
+        width: 100%;
+        height: 4px;
+        background-color: #e1e1e1;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &.active {
+          background-color: var(--Primary-300);
+        }
+        &:hover {
+          background-color: #0073e5;
+        }
+      }
+    }
+  }
+}
+
+// 모바일 버전
+@include mobile {
+  #best-seller {
+    h2 {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+    .slider-wrap {
+      position: relative;
+      ul.slider {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        li {
+          flex: 0 0 82vw;
+          .img-wrap {
+            img {
+            }
+            .num {
+            }
+            .heart {
+            }
+          }
+          .best-txt {
+            .title {
+              font-size: 0.75rem !important;
+            }
+            .sub1 {
+              font-size: 0.875rem !important;
+            }
+            .price {
+              .price-row {
+                .discount {
+                  font-size: 1rem !important;
+                  font-weight: 400;
+                  .sale-price {
+                    > span {
+                      font-weight: 400;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .btn {
+        display: none;
+      }
+    }
+    .indi-bottom {
+      display: none;
+    }
+  }
+}
+
+// 애니메이션
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); // 위로 10px 이동
+  }
+  100% {
+    transform: translateY(0); // 원위치
+  }
+}

@@ -1,0 +1,123 @@
+@use "../../assets/scss/mixins" as *;
+
+// PC
+#banner2 {
+  position: relative;
+  padding-bottom: 5rem;
+  .images {
+    @include flex-layout($gap: 0);
+    width: 100%;
+    .box1,
+    .box2 {
+      overflow: hidden;
+      &:hover h2 {
+        transition: 0.3s;
+        color: var(--Primary-300);
+      }
+      position: relative;
+      flex: 1;
+      aspect-ratio: 1 / 1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          transform: scale(1.05);
+          filter: brightness(0.75);
+        }
+      }
+      h2 {
+        cursor: pointer;
+        position: absolute;
+        font-size: clamp(1.25rem, 3vw, 3rem);
+        line-height: 1.2;
+        left: clamp(1rem, 5vw, 3rem);
+        bottom: clamp(1rem, 6vw, 4rem);
+        color: #fff;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    @include flex-layout(row, space-between);
+    .prev,
+    .next {
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+      background: rgba(0, 0, 0, 0.2);
+      color: var(--Static-white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      &:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  .indi-bottom {
+    width: 100%;
+    padding-top: 3rem;
+    @include flex-layout(row, center, center, 0);
+    .indicator {
+      @include flex-layout(row, flex-start, center, 0);
+      width: calc(100% - 150px);
+      gap: 8px;
+      span {
+        flex: 1;
+        height: 4px;
+        background-color: #e1e1e1;
+        border-radius: 2px;
+        &.active {
+          background-color: var(--Primary-300);
+        }
+      }
+      .indi-txt {
+        width: 150px;
+        p {
+          cursor: pointer;
+          font-size: 1.125rem;
+          color: var(--Primary-300);
+          @include flex-layout(row, center, center, 4px);
+          white-space: nowrap;
+          &:hover {
+            transition: 0.3s;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 모바일
+@include mobile {
+  #banner2 {
+    .images {
+      @include flex-layout(column, $gap: 0);
+      .box1,
+      .box2 {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        h2 {
+          font-size: 1.25rem;
+          left: 1.25rem;
+          bottom: 1.25rem;
+          white-space: normal;
+        }
+      }
+    }
+    .btn,
+    .indi-bottom {
+      display: none;
+    }
+  }
+}

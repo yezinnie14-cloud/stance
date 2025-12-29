@@ -1,0 +1,251 @@
+@use "../../assets/scss/mixins" as *;
+
+//PC버전
+#paceypick {
+  width: 100%;
+  padding-bottom: 5rem;
+  h2 {
+    padding: 0 3rem 14px;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    li {
+      border-right: 1px solid #0073e5;
+      cursor: pointer;
+      background-color: rgba(245, 245, 245, 1);
+      &:hover img {
+        animation: float 1.5s ease-in-out infinite;
+      }
+      .img-wrap {
+        position: relative;
+      }
+      img {
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        &:hover {
+          animation: float 1.5s ease-in-out infinite;
+        }
+      }
+      .num {
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+        font-size: 3rem;
+        font-style: italic;
+        color: var(--Primary-300);
+      }
+      .heart {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 28px;
+        cursor: pointer;
+        color: #aaa;
+        cursor: pointer;
+        &.on{
+              color: #ff4d6d;
+            }
+        &:hover {
+          transition: 0.3s;
+          color: #ff4d6d;
+        }
+      }
+      .best-txt {
+        border: 1px solid #0073e5;
+        border-right: none;
+        border-left: none;
+        background-color: var(--Static-white);
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        > p.title {
+          font-size: 0.875rem;
+          font-weight: 700;
+        }
+        > p.sub1 {
+          font-size: 1.125rem;
+        }
+        .price {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          .original-price {
+            font-size: 0.875rem;
+            color: var(--Text-300);
+            text-decoration: line-through;
+          }
+          .price-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .discount {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: #0073e5;
+            }
+            .sale-price {
+              font-size: 1.25rem;
+              font-weight: 700;
+              color: #000;
+              > span {
+                font-size: 1.125rem;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+      &:hover .best-txt {
+        transition: 0.5s;
+        background-color: var(--Primary-100);
+      }
+      &:hover p.sub1 {
+        transition: 0.5s;
+        font-weight: bolder;
+      }
+    }
+  }
+  .indi-bottom {
+    width: 100%;
+    padding-top: 3rem;
+    @include flex-layout(row, center, center);
+    .indicator {
+      width: calc(100% - 150px);
+      gap: 8px;
+      @include flex-layout(row, flex-start, center);
+      span {
+        flex: 1;
+        height: 4px;
+        background-color: #e1e1e1;
+        border-radius: 2px;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        &.active {
+          background-color: var(--Primary-300);
+        }
+        &:hover {
+          background-color: #0073e5;
+        }
+      }
+      .indi-txt {
+        cursor: pointer;
+        width: 150px;
+        p {
+          font-size: 1.125rem;
+          color: var(--Primary-300);
+          @include flex-layout(row, center, center, 4px);
+          white-space: nowrap;
+          &:hover {
+            transition: 0.3s;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 모바일 버전
+@include mobile {
+  #paceypick {
+    h2 {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        .img-wrap {
+          img {
+          }
+          .num {
+          }
+          .heart {
+          }
+        }
+        .best-txt {
+          .title {
+            font-size: 0.75rem;
+          }
+          .sub1 {
+            font-size: 0.875rem;
+          }
+          .price {
+            .original-price {
+              font-size: 0.75rem;
+            }
+            .price-row {
+              .discount {
+                font-size: 1rem;
+                font-weight: 400;
+              }
+              .sale-price {
+                >span{
+                  font-size: 0.875rem;
+                  font-weight: 400;
+                }
+                font-size: 1rem;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+    .indi-bottom {
+      padding: 0;
+      width: 100%;
+      .indicator {
+        padding: 1rem 2rem;
+        @include flex-layout();
+        background-color: var(--Primary-300);
+        width: 100%;
+        span {
+          display: none;
+          &.active {
+          }
+        }
+        .indi-txt {
+          @include flex-layout();
+          p {
+            color: var(--Static-white);
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #paceypick {
+    ul {
+      grid-template-columns: repeat(2, 2fr);
+    }
+  }
+}
+@media (max-width: 375px) {
+  #paceypick {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// 애니메이션
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); // 위로 10px 이동
+  }
+  100% {
+    transform: translateY(0); // 원위치
+  }
+}

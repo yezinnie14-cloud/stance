@@ -1,0 +1,290 @@
+[
+  {
+    "id": "1",
+    "image": "shoes01-1.jpg",
+    "title": "PACEY",
+    "sub1": "에어 라이트 러너",
+    "price1": "129000",
+    "price2": "109000",
+    "category": "best",
+    "detailimage": [
+      "shoes01-2.jpg",
+      "shoes01-3.jpg",
+      "shoes01-4.jpg",
+      "shoes01-5.jpg",
+      "shoes01-6.jpg"
+    ]
+  },
+  {
+    "id": "2",
+    "image": "shoes02-1.jpg",
+    "title": "PACEY",
+    "sub1": "노바 스피드 러너",
+    "price1": "139000",
+    "price2": "119000",
+    "category": "best",
+    "detailimage": [
+      "shoes02-2.jpg",
+      "shoes02-3.jpg",
+      "shoes02-4.jpg",
+      "shoes02-5.jpg",
+      "shoes02-6.jpg"
+    ]
+  },
+  {
+    "id": "3",
+    "image": "shoes03-1.jpg",
+    "title": "PACEY",
+    "sub1": "에어로 플렉스",
+    "price1": "149000",
+    "price2": "129000",
+    "category": "best",
+    "detailimage": [
+      "shoes03-2.jpg",
+      "shoes03-3.jpg",
+      "shoes03-4.jpg",
+      "shoes03-5.jpg",
+      "shoes03-6.jpg"
+    ]
+  },
+  {
+    "id": "4",
+    "image": "shoes04-1.jpg",
+    "title": "PACEY",
+    "sub1": "어반 스텝 러너",
+    "price1": "119000",
+    "price2": "99000",
+    "category": "best",
+    "detailimage": [
+      "shoes04-2.jpg",
+      "shoes04-3.jpg",
+      "shoes04-4.jpg",
+      "shoes04-5.jpg",
+      "shoes04-6.jpg"
+    ]
+  },
+  {
+    "id": "5",
+    "image": "shoes05-1.jpg",
+    "title": "PACEY",
+    "sub1": "스카이 대쉬",
+    "price1": "159000",
+    "price2": "135000",
+    "category": "best",
+    "detailimage": [
+      "shoes05-2.jpg",
+      "shoes05-3.jpg",
+      "shoes05-4.jpg",
+      "shoes05-5.jpg",
+      "shoes05-6.jpg"
+    ]
+  },
+  {
+    "id": "6",
+    "image": "shoes06-1.jpg",
+    "title": "PACEY",
+    "sub1": "라이트웨이브 러너",
+    "price1": "125000",
+    "price2": "105000",
+    "category": "best",
+    "detailimage": [
+      "shoes06-2.jpg",
+      "shoes06-3.jpg",
+      "shoes06-4.jpg",
+      "shoes06-5.jpg",
+      "shoes06-6.jpg"
+    ]
+  },
+  {
+    "id": "7",
+    "image": "shoes07-1.jpg",
+    "title": "PACEY",
+    "sub1": "펄스 런",
+    "price1": "145000",
+    "price2": "122000",
+    "category": "best",
+    "detailimage": [
+      "shoes07-2.jpg",
+      "shoes07-3.jpg",
+      "shoes07-4.jpg",
+      "shoes07-5.jpg",
+      "shoes07-6.jpg"
+    ]
+  },
+  {
+    "id": "8",
+    "image": "shoes08-1.jpg",
+    "title": "PACEY",
+    "sub1": "스트리트 에어",
+    "price1": "115000",
+    "price2": "95000",
+    "category": "best",
+    "detailimage": [
+      "shoes08-2.jpg",
+      "shoes08-3.jpg",
+      "shoes08-4.jpg",
+      "shoes08-5.jpg",
+      "shoes08-6.jpg"
+    ]
+  },
+  {
+    "id": "9",
+    "image": "shoes09-1.jpg",
+    "title": "PACEY",
+    "sub1": "제니스 러너",
+    "price1": "165000",
+    "price2": "140000",
+    "category": "best",
+    "detailimage": [
+      "shoes09-2.jpg",
+      "shoes09-3.jpg",
+      "shoes09-4.jpg",
+      "shoes09-5.jpg",
+      "shoes09-6.jpg"
+    ]
+  },
+  {
+    "id": "10",
+    "image": "shoes10-1.jpg",
+    "title": "PACEY",
+    "sub1": "플로우 런",
+    "price1": "135000",
+    "price2": "115000",
+    "category": "best",
+    "detailimage": [
+      "shoes10-2.jpg",
+      "shoes10-3.jpg",
+      "shoes10-4.jpg",
+      "shoes10-5.jpg",
+      "shoes10-6.jpg"
+    ]
+  },
+  {
+    "id": "11",
+    "image": "shoes11-1.jpg",
+    "title": "PACEY",
+    "sub1": "클라우드 핏",
+    "price1": "155000",
+    "price2": "132000",
+    "category": "pick",
+    "detailimage": [
+      "shoes11-2.jpg",
+      "shoes11-3.jpg",
+      "shoes11-4.jpg",
+      "shoes11-5.jpg",
+      "shoes11-6.jpg"
+    ]
+  },
+  {
+    "id": "12",
+    "image": "shoes12-1.jpg",
+    "title": "PACEY",
+    "sub1": "무브 에어",
+    "price1": "120000",
+    "price2": "99000",
+    "category": "pick",
+    "detailimage": [
+      "shoes12-2.jpg",
+      "shoes12-3.jpg",
+      "shoes12-4.jpg",
+      "shoes12-5.jpg",
+      "shoes12-6.jpg"
+    ]
+  },
+  {
+    "id": "13",
+    "image": "shoes13-1.jpg",
+    "title": "PACEY",
+    "sub1": "래피드 엑스",
+    "price1": "170000",
+    "price2": "145000",
+    "category": "pick",
+    "detailimage": [
+      "shoes13-2.jpg",
+      "shoes13-3.jpg",
+      "shoes13-4.jpg",
+      "shoes13-5.jpg",
+      "shoes13-6.jpg"
+    ]
+  },
+  {
+    "id": "14",
+    "image": "shoes14-1.jpg",
+    "title": "PACEY",
+    "sub1": "이지 런",
+    "price1": "110000",
+    "price2": "89000",
+    "category": "pick",
+    "detailimage": [
+      "shoes14-2.jpg",
+      "shoes14-3.jpg",
+      "shoes14-4.jpg",
+      "shoes14-5.jpg",
+      "shoes14-6.jpg"
+    ]
+  },
+  {
+    "id": "15",
+    "image": "shoes15-1.jpg",
+    "title": "PACEY",
+    "sub1": "볼트 스텝",
+    "price1": "148000",
+    "price2": "125000",
+    "category": "pick",
+    "detailimage": [
+      "shoes15-2.jpg",
+      "shoes15-3.jpg",
+      "shoes15-4.jpg",
+      "shoes15-5.jpg",
+      "shoes15-6.jpg"
+    ]
+  },
+  {
+    "id": "16",
+    "image": "shoes16-1.jpg",
+    "title": "PACEY",
+    "sub1": "데일리 핏 러너",
+    "price1": "118000",
+    "price2": "98000",
+    "category": "pick",
+    "detailimage": [
+      "shoes16-2.jpg",
+      "shoes16-3.jpg",
+      "shoes16-4.jpg",
+      "shoes16-5.jpg",
+      "shoes16-6.jpg"
+    ]
+  },
+  {
+    "id": "17",
+    "image": "shoes17-1.jpg",
+    "title": "PACEY",
+    "sub1": "하이퍼 런",
+    "price1": "160000",
+    "price2": "138000",
+    "category": "pick",
+    "detailimage": [
+      "shoes17-2.jpg",
+      "shoes17-3.jpg",
+      "shoes17-4.jpg",
+      "shoes17-5.jpg",
+      "shoes17-6.jpg"
+    ]
+  },
+  {
+    "id": "18",
+    "image": "shoes18-1.jpg",
+    "title": "PACEY",
+    "sub1": "소프트 스텝",
+    "price1": "122000",
+    "price2": "102000",
+    "category": "pick",
+    "detailimage": [
+      "shoes18-2.jpg",
+      "shoes18-3.jpg",
+      "shoes18-4.jpg",
+      "shoes18-5.jpg",
+      "shoes18-6.jpg"
+    ]
+  }
+]

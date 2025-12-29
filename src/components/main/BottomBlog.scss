@@ -1,0 +1,89 @@
+@use "../../assets/scss/mixins" as *;
+
+#keyword {
+  width: 100%;
+  padding-bottom: 5rem;
+  > h2 {
+    text-align: center;
+    padding: 0 3rem;
+    padding-bottom: 14px;
+  }
+  .scroll-wrapper {
+    overflow: hidden;
+    ul.scroll-list {
+      display: flex;
+      gap: 0.5rem;
+      width: max-content;
+      animation: scroll 40s linear infinite;
+      li {
+        flex: 0 0 20%;
+        margin-right: 0.5rem;
+        max-width: 500px;
+        aspect-ratio: 1/2;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.3s;
+          filter: brightness(0.7);
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        > h2 {
+          font-size: clamp(1.25rem, 2vw, 2rem);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var(--Static-white);
+          transition: 0.3s;
+        }
+        &:hover h2 {
+          color: var(--Primary-300);
+        }
+      }
+    }
+    /* hover 시 멈춤 */
+    &:hover ul.scroll-list {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/* 모바일 */
+@include mobile {
+  #keyword {
+    h2 {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+
+    .scroll-wrapper {
+      ul.scroll-list {
+        li {
+          flex: 0 0 auto; // 모바일에서 더 작게
+          max-width: 250px;
+          aspect-ratio: 1/2;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 무한 스크롤 keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}

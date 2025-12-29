@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "image": "keyword-1.jpg",
+    "title": "NOTJUSTRUN"
+  },
+  {
+    "id": 2,
+    "image": "keyword-2.jpg",
+    "title": "PACEY"
+  },
+  {
+    "id": 3,
+    "image": "keyword-3.jpg",
+    "title": "RUNNING"
+  },
+  {
+    "id": 4,
+    "image": "keyword-4.jpg",
+    "title": "MOVEFAST"
+  },
+  {
+    "id": 5,
+    "image": "keyword-5.jpg",
+    "title": "URBANRUN"
+  },
+  {
+    "id": 6,
+    "image": "keyword-6.jpg",
+    "title": "EVERYSTEP"
+  }
+]

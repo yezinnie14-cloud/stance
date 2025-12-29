@@ -1,0 +1,107 @@
+@use "../../assets/scss/mixins" as *;
+
+// pc버전
+#event {
+  padding-bottom: 5rem;
+  .event-bg {
+    position: relative;
+    padding: 2rem;
+    @include flex-layout(column);
+    background-color: var(--Static-black);
+    color: var(--Static-white);
+    .event-box {
+      @include flex-layout();
+      width: 100%;
+      img {
+        animation: float 3s ease-in-out infinite;
+        width: 200px;
+        height: 200px;
+      }
+      .event-txt {
+        h2 {
+          font-size: 1.75rem;
+          font-weight: 700;
+          padding-bottom: 1.75rem;
+        }
+        p {
+          transition: 0.3s;
+          font-weight: 400;
+          cursor: pointer;
+          &:hover {
+            color: var(--Primary-300);
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+    > p {
+      font-size: 0.875rem;
+    }
+    .btn {
+      cursor: pointer;
+      width: 100%;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      @include flex-layout(row, space-between);
+      .prev,
+      .next {
+        transition: 0.3s;
+        @include flex-layout;
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        color: var(--Static-white);
+        background: rgba(0, 0, 0, 0.2);
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}
+
+// 모바일 버전
+@include mobile {
+  #event {
+    .event-bg {
+      position: relative;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      .event-box {
+        img {
+          display: none;
+        }
+        .event-txt {
+          h2 {
+          }
+          p {
+          }
+        }
+      }
+      > p {
+        font-size: 12px;
+        padding: 0.25rem 0.75rem;
+        background-color: #333;
+        border-radius: 1.25rem;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  }
+}
+
+// 애니메이션
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); // 위로 10px 이동
+  }
+  100% {
+    transform: translateY(0); // 원위치
+  }
+}

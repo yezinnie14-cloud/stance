@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "image": "RunningNews-1.jpg",
+    "title": "12월도 페이시와 함께 달려요 ",
+    "sub1": "running",
+    "sub2": "마라톤"
+  },
+  {
+    "id": "2",
+    "image": "RunningNews-2.jpg",
+    "title": "Run Your Face -운동화가 러닝에 미치는 영향",
+    "sub1": "러닝",
+    "sub2": "러닝화"
+  },
+  {
+    "id": "3",
+    "image": "RunningNews-3.jpg",
+    "title": "페이시와 함께하는 2025 마라톤",
+    "sub1": "마라톤",
+    "sub2": "러닝"
+  },
+  {
+    "id": "4",
+    "image": "RunningNews-4.jpg",
+    "title": "러닝부터 일상까지 책임지는 페이시",
+    "sub1": "러닝화",
+    "sub2": "패션화"
+  }
+]
