@@ -21,11 +21,8 @@ const CategorySection = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: item,
-            // 요소가 뷰포트 85%에 들어오면
             start: "top 85%",
-            // 요소가 뷰포트 아래로 나가기 전까지
             end: "bottom 20%",
-            // 스크롤 올라가면 다시 숨김
             toggleActions: "play reverse play reverse",
             markers: false,
           },
