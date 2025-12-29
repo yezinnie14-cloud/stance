@@ -410,24 +410,24 @@
   }
 
   // 진행바 (각 칸 클릭 가능)
-//   &-progress {
-//     flex: 1;
-//     display: flex;
-//     gap: 4px;
+  &-progress {
+    flex: 1;
+    display: flex;
+    gap: 4px;
 
-//     &-item {
-//       flex: 1;
-//       height: 2px;
-//       background: rgba(255, 255, 255, 0.3);
-//       border: none;
-//       padding: 0;
-//       cursor: pointer;
+    &-item {
+      flex: 1;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      padding: 0;
+      cursor: pointer;
 
-//       &.is-active {
-//         background: #fff;
-//       }
-//     }
-//   }
+      &.is-active {
+        background: #fff;
+      }
+    }
+  }
 
   &-count {
     @include body-M;
