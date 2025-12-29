@@ -1,8 +1,8 @@
 import Banner2Img1 from "../../assets/images/banner2/running-1.jpg";
 import Banner2Img2 from "../../assets/images/banner2/running-2.jpg";
 import "./BannerSection2.scss";
-import { IoIosArrowForward } from "react-icons/io";
-import { IoIosArrowBack } from "react-icons/io";
+// import { IoIosArrowForward } from "react-icons/io";
+// import { IoIosArrowBack } from "react-icons/io";
 
 const BannerSection2 = () => {
   return (
@@ -24,15 +24,15 @@ const BannerSection2 = () => {
           </h2>
         </div>
       </div>
-      <div className="btn">
+      {/* <div className="btn">
         <div className="prev">
           <IoIosArrowBack />
         </div>
         <div className="next">
           <IoIosArrowForward />
         </div>
-      </div>
-      <div className="indi-bottom">
+      </div> */}
+      {/* <div className="indi-bottom">
         <div className="indicator">
           <span className="active"></span>
           <span></span>
@@ -45,7 +45,7 @@ const BannerSection2 = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

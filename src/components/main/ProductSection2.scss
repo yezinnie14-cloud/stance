@@ -162,14 +162,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       li {
-        .img-wrap {
-          img {
-          }
-          .num {
-          }
-          .heart {
-          }
-        }
+      
         .best-txt {
           .title {
             font-size: 0.75rem;
@@ -209,8 +202,6 @@
         width: 100%;
         span {
           display: none;
-          &.active {
-          }
         }
         .indi-txt {
           @include flex-layout();
